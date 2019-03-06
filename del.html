@@ -1,0 +1,39 @@
+<HTML>
+<head>
+<script type="text/javascript">
+function validate1()
+{
+ if(ff1.rollno.value == " ")
+  {
+alert("Enter Correct RollNo");
+reload();
+  }
+ else
+ {
+   alert("Details Deleted Successfully");
+   reload();
+  }
+}
+
+</script>
+</head>
+
+
+<body background="log.jpg">
+<br><br><br><br>
+<br><br><br><br>
+<font face="comic sans ms" size="25" color="red">
+<center>
+<form name="ff1">
+<table>
+<tr>
+<td><b>RollNo: </b></td><td><input type="text" name="rollno" value="" placeholder="Enter RollNo"></td>
+</tr>
+<tr>
+<td></td><td><input type="button" value="Delete" onclick="validate1()"></td>
+</tr>
+</table>
+</form>
+</font>
+</body>
+</HTML>

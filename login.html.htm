@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Login Form</title>
+<script type="text/javascript">
+function validate(form)
+{
+
+ if(form.userid.value == "taniya" && form.pswrd.value == "taniya123")
+  {
+	alert("Login successfull!!!")
+    window.open('register.html')
+  }
+ else
+ {
+   alert("Enter Correct Password or Username")
+   form.userid.focus()
+  }
+}
+
+</script>
+</head>
+<body background="log.jpg">
+<br><br><br><br><br>
+<h1 align="center">Login Form</h1>
+ <form name= form1>
+<br>
+  <table align=center>
+   <tr>
+    <td id=username>UserName :</td>
+    <td><input type="text" name="userid"  ></td>
+   </tr>
+
+   <tr>
+    <td id=password>Password</td>
+    <td><input type="password" name="pswrd"></td>
+   </tr>
+ 
+ <tr>
+
+    <td></td>
+     
+    <td><input type="submit"  onclick="validate(this.form)" value=Login ></td>
+   </tr>
+  </table>
+ </form>
+</body>
+</html>

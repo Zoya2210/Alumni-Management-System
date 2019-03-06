@@ -1,0 +1,115 @@
+<head>
+<script type="text/javascript">
+function ss()
+{
+	var first=document.form1.fname.value;
+	var last=document.form1.lname.value;
+	var emailID = document.form1.id.value;
+        	var atpos = emailID.indexOf("@");
+      	var dotpos = emailID.lastIndexOf(".");
+	var mobile=document.form1.contact.value;
+	if(first=="")
+	{
+		alert("Enter valid first name");
+		document.form1.fname.focus();
+		return 0;
+	}
+	if(last=="")
+	{
+		alert("Enter valid last name");
+		document.form1.lname.focus();
+		return 0;
+	}
+	
+	if(isNaN( document.form1.pin.value) || document.form1.pin.value.length != 6) 
+              {
+            		 alert( "Please provide a valid pincode." );
+           		 document.form1.pin.focus() ;
+            		 return false;
+              }
+	if(isNaN(mobile))
+	{
+		alert("Enter valid mobile no.");
+		document.form1.contact.focus();
+		return 0;
+	}         
+              if ((document.form1.id.value=="" )|| (atpos < 1) || ( dotpos - atpos < 2 )) 
+              {
+          		alert("Please enter correct email ID");
+          	  	document.form1.id.focus() ;
+          		return false;
+            }
+            var pass=document.form1.password.value;
+            if(pass=="" || pass.length < 6) 
+           {
+            		alert( "Please provide a valid password(Password length must be greater than 6 " );
+             		document.form1.password.focus() ;
+           		 return false;
+           }
+           window.document.write("<br><br><br><br><br><br><br><br><p><b><center>You have Successfully Registered!!!!</b></p>"); 
+}
+</script>
+</head>
+<body background="log.jpg"><h1>Personal Details</h1>
+
+<form name="form1" onsubmit="return ss();">
+<table>
+<tr>
+<td>First name:</td> <td><input type="text" name ="fname"><td>
+</tr><tr>
+<td>Last name:</td> <td><input type="text" name ="lname"></td>
+</tr>
+<tr>
+<td>Address:</td> <td><textarea rows="3" cols="20" name="address"></textarea></td>
+</tr>
+
+<tr>
+<td>City </td><td><select id="city" name="city"><option value="ind">Mumbai</option>
+<option value="ind">Pune</option></select></td>
+</tr>
+<tr>
+<td>State</td><td><select id="state" name="state"><option value="ind">Maharashtra</option>
+<option value="ind">Rajasthan</option><option value="ind">Panjab</option><option value="ind">Karela</option></select></td>
+</tr>
+<tr>
+<td>Gender:</td><td><input type="radio" name ="gender" value="Male">Male
+	   <input type="radio" name ="gender" value="Female">Female
+	   <input type="radio" name ="gender" value="Other">Other</td>
+</tr>
+<tr>
+<td>Pin Code:</td> <td><input type="text" name ="pin" maxlength="6" ></td>
+</tr><tr>
+<td>DOB:</td> <td><input type="date" name ="dob"></td>
+</tr><tr>
+<td>Contact no:</td><td><select name="dropdown">
+<option value="+91">+91</option>
+<option value="+32">+32</option>
+<option value="+55">+55</option>
+<option value="+93">+93</option>
+<option value="+54">+54</option>
+<option value="+43">+43</option>
+</select> <input type="text" name ="contact" maxlength="10" size="10"></td>
+</tr><tr>
+<td>Email-id:</td> <td><input type="text" name ="id" size="50"></td>
+</tr><tr>
+<td>Password:</td><td> <input type="password" name="password"></td>
+</tr><tr>
+<td>Qualifications:</td><td><input type="checkbox" name ="qualification0" value="SSC">SSC
+		   <input type="checkbox" name ="qualification1" value="HSC">HSC
+		   <input type="checkbox" name ="qualification2" value="DIPLOMA">Diploma
+		   <input type="checkbox" name ="qualification3" value="GRADUATION">Graduation
+		   
+		   <input type="checkbox" name ="qualification4" value="OTHER">OTHER   <input type="text" name ="qualification5" value="Please specify"></td>
+</tr><tr>
+<td>Upload any your resume</td>
+<td>
+<input type="file" name="fileupload">
+
+<input type="button" name="upload" value="upload"></td>
+</tr><tr>
+<td><input type="Submit" name="submit" value="Submit">
+<input type="Reset" name="reset" value="Reset"></td>
+</tr></table>
+</form>
+</body>
+

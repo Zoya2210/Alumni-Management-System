@@ -1,0 +1,52 @@
+<html>
+<head>
+<script type="text/javascript">
+function Confirm()
+{
+if(document.RegForm.Ename.value =="" || document.RegForm.doe.value =="" || document.RegForm.toe.value =="" ||document.RegForm.eo.value =="" ||document.RegForm.nos.value =="")
+{
+window.alert("All field must have values!"); 
+}
+else
+{
+window.alert("Event added successfully!"); 
+reload();
+}
+}
+</script>
+</head>
+<body background="log.jpg">
+<form name="RegForm">
+<center>
+<br>
+<h3><b><font face="comic sans MS"> EVENTS </font></b></h3>
+<br>
+<table>
+<tr>
+<td><b>Event Name: </font></b></td><td><input type = "text" name="Ename" style=""></td>
+</tr>
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+<td><b>Date Of Event:  </font></b></td><td><input type="date" name="doe" style="width:174"></td>
+</tr>
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+<td><b>Time Of Event:  </font></b></td><td><input type="time" name="toe" style="width:174"></td>
+</tr>
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+<td><b>Event Organizer:  </font></b></td><td><input type="text" name="eo" style="width:174"></td>
+</tr>
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+<td><b>Number of students:  </font></b></td><td><input type="number" name="nos" style="width:174"></td>
+</tr>
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+<td></td>
+<td><input type="submit" name="submit"  value="submit" style="height:20;width:100" onclick="return Confirm()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

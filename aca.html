@@ -1,0 +1,67 @@
+<head>
+<script type="text/javascript">
+function ss()
+{
+	var rollno=document.form1.rollno.value;
+
+	if(rollno=="")
+	{
+		alert("Please enter roll no!!");
+		document.form1.rollno.focus();
+		reload();
+	}
+	else if (document.form1.start.value == document.form1.start1.value )
+	{
+	alert("Please Enter peoper Year of Joining and Year of Passed out!!!");
+	}
+ 	else
+	{
+	alert("Academic Details registered successfully!!!");
+	window.document.write("<br><br><br><br><br><br><br><br><p><b><center>Go for Personal Details</b></p>");
+	}
+   
+}
+</script>
+</head>
+<body background="log.jpg"><h1>Acadamic Details</h1>
+<form name="form1" onsubmit="return ss();">
+<table>
+<tr>
+<td>Year of Passed out*:</td> <td><input type="month" id="start" name="start" required></td>
+</tr>
+<tr>
+<td>Year of Joining*:</td> <td><input type="month" id="start1" name="start1" required></td>
+</tr>     
+<tr>
+<td>Profession*:</td><td>
+<select name="dropdown" >
+<option value="abc">Manager</option>
+<option value="abc">Senior Assistant</option>
+<option value="ppp">Accounting</option>
+<option value="aaa">Finance</option>
+<option value="bbb">Junior Assistant</option>
+<option value="OTHER">OTHER </option></td>
+</select></tr>
+<tr>
+<td>Roll No:</td>
+ <td><input type="text" name ="rollno" maxlength="10" size="10"></td>
+     </tr>
+<tr>
+<td>Direct Second Year*:</td><td><input type="radio" name ="DSE" value="Yes" >Yes
+	   <input type="radio" name ="DSE" value="No">No
+	   </td>
+</tr>
+<tr>
+<td>Upload any your Final Year Marksheet*:</td>
+<td>
+<input type="file" name="fileupload">
+
+<input type="button" name="upload" value="upload"></td>
+</tr>
+<td><input type="Submit" name="Submit" value="Submit">
+<input type="Reset" name="reset" value="Reset"></td>
+</tr>
+
+</table>
+</form>
+</body>               
